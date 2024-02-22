@@ -73,6 +73,18 @@
   @include responsive(padding-right, 0, 0, 0, 15px, 15px, 15px);
 }
 
+.main-content-time-section {
+  @include responsive(
+    border-right,
+    none,
+    none,
+    none,
+    none,
+    2px solid rgb(233, 233, 233),
+    2px solid rgb(233, 233, 233)
+  );
+}
+
 .responsiveMenu {
   position: absolute;
   top: 85px;
