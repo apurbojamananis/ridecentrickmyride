@@ -1,0 +1,134 @@
+@use "../utils/index" as variable;
+
+@mixin titleStyle {
+  font-size: variable.$font-size-xl;
+  font-weight: 700;
+  color: variable.$color-black;
+}
+
+.title {
+  @include titleStyle;
+}
+
+.sidebar {
+  padding-left: 0px;
+}
+
+.title-left-border {
+  @include titleStyle;
+  border-left: 5px solid variable.$color-green;
+  padding-left: 10px;
+}
+.route-details-img img {
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.route-details p {
+  font-size: variable.$font-size-medium;
+  color: variable.$color-gray-bold;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.route-section {
+  max-height: 400px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.route {
+  position: relative;
+}
+
+.route::after {
+  content: "";
+  display: inline-block;
+  width: 80%;
+  height: 1px;
+  position: absolute;
+  background-color: rgb(233, 233, 233);
+  opacity: 0.5;
+  top: 15px;
+  margin-left: 15px;
+}
+
+.route-description h3 {
+  font-size: variable.$font-size-medium;
+  font-weight: 700;
+  color: variable.$color-blue;
+}
+
+.route-description h4 {
+  font-size: variable.$font-size-default;
+  color: variable.$color-gray-bold;
+  font-weight: 700;
+  margin: 5px 0px;
+}
+
+.route-description p {
+  font-size: variable.$font-size-default;
+  color: variable.$color-gray;
+  margin: 5px 0px;
+}
+
+.text-green {
+  color: variable.$color-green !important;
+}
+.text-green-button {
+  color: variable.$color-green;
+}
+.text-green-button:hover {
+  color: variable.$color-green;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: variable.$color-body;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: variable.$color-body;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: variable.$color-body;
+}
+
+@mixin borderStyle {
+  padding: 8px;
+  border-radius: 16px;
+  margin-top: -8px;
+}
+
+.custom-border-fixed {
+  @include borderStyle;
+  border: 1px solid variable.$color-blue;
+}
+
+.custom-border {
+  @include borderStyle;
+}
+
+.roundImg {
+  position: relative;
+}
+
+.roundImg::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 90%;
+  background-color: rgb(233, 233, 233);
+  left: 5px;
+  top: 12px;
+}

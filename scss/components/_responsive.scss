@@ -1,0 +1,127 @@
+@use "../utils/index" as variable;
+@mixin responsive(
+  $property,
+  $none,
+  $xSmall,
+  $small,
+  $medium,
+  $large,
+  $extraLarge
+) {
+  #{$property}: $none;
+
+  @media (min-width: 480px) {
+    #{$property}: $xSmall;
+  }
+
+  @media (min-width: 576px) {
+    #{$property}: $small;
+  }
+
+  @media (min-width: 768px) {
+    #{$property}: $medium;
+  }
+
+  @media (min-width: 992px) {
+    #{$property}: $large;
+  }
+
+  @media (min-width: 1200px) {
+    #{$property}: $extraLarge;
+  }
+}
+
+// Usage example
+.main-content-header {
+  @include responsive(width, 100%, 100%, 100%, 80%, 60%, 40%);
+}
+
+.main-content-header h1 {
+  @include responsive(font-size, 28px, 28px, 28px, 32px, 32px, 36px);
+}
+
+.main-content-time h2 {
+  @include responsive(font-size, 24px, 24px, 28px, 32px, 36px, 40px);
+}
+
+.main-content-passenger {
+  h5 {
+    @include responsive(font-size, 24px, 24px, 24px, 28px, 28px, 32px);
+  }
+}
+
+.main-content-passenger-info {
+  h4 {
+    @include responsive(font-size, 20px, 20px, 20px, 22px, 24px, 24px);
+  }
+}
+
+.add-passenger {
+  h4 {
+    @include responsive(width, 100%, 100%, 100%, 80%, 80%, 80%);
+  }
+}
+
+.plusSquare {
+  @include responsive(width, 20%, 40%, 60%, 80%, 80%, 80%);
+}
+
+.main-content-service-section {
+  @include responsive(padding-left, 0, 0, 0, 0, 15px, 15px);
+}
+.sidebar {
+  @include responsive(padding-right, 0, 0, 0, 15px, 15px, 15px);
+}
+
+.responsiveMenu {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  z-index: 999;
+  background-color: white;
+  min-height: 100vh;
+  padding: 0px 10px;
+  transition: transform 1s;
+  transform: translateX(-100%);
+}
+
+.responsiveMenu {
+  transform: translateX(0%);
+  ul {
+    row-gap: 15px;
+
+    li {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+        color: variable.$color-gray;
+        font-size: variable.$font-size-small;
+        padding-bottom: 5px;
+
+        &:hover {
+          color: variable.$color-green;
+          font-weight: 700;
+          border-bottom: 3px solid variable.$color-green;
+        }
+        &:visited {
+          color: variable.$color-gray;
+        }
+        &:focus {
+          color: variable.$color-green;
+        }
+        &:active {
+          color: variable.$color-green;
+        }
+      }
+    }
+  }
+}
+
+.homeChild {
+  padding-top: 10px;
+}
+
+.active-menu {
+  color: variable.$color-green !important;
+}

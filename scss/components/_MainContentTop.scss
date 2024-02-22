@@ -1,0 +1,109 @@
+@use "../utils/index" as variable;
+
+.main-content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.main-content-top {
+  padding: 0px 25px 25px 25px;
+}
+
+.main-content-header {
+  width: 40%;
+  padding: 25px 0px 20px 40px;
+}
+
+.main-content-header h1 {
+  font-size: 36px;
+  color: variable.$color-blue;
+  font-weight: 700;
+}
+
+.main-content-time-section {
+  border-right: 2px solid rgb(233, 233, 233);
+}
+
+.main-content-time h2 {
+  display: inline-block;
+  color: variable.$color-gray;
+  font-size: 40px;
+  font-weight: 600;
+  padding-top: 15px;
+  border-top: 1px solid rgb(233, 233, 233);
+  span {
+    margin-left: 10px;
+    display: inline-block;
+    color: variable.$color-gray;
+    font-size: variable.$font-size-xl;
+  }
+}
+
+.main-content-passenger {
+  margin-top: 40px;
+  h5 {
+    font-size: 32px;
+    color: variable.$color-black;
+    font-weight: 700;
+  }
+  p {
+    font-size: variable.$font-size-large;
+    color: variable.$color-gray;
+    font-weight: 500;
+  }
+}
+
+.passenger-contact-info {
+  margin-top: 30px;
+}
+
+.main-content-passenger-description {
+  margin-top: 15px;
+  span {
+    font-size: 24px;
+    font-weight: 700;
+    color: variable.$color-gray;
+  }
+}
+.main-content-ride-number {
+  font-size: variable.$font-size-xl;
+  font-weight: 600;
+  color: variable.$color-gray;
+}
+
+.main-content-passenger-info {
+  margin-left: 20px;
+  h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: variable.$color-gray;
+  }
+}
+
+.add-passenger {
+  margin-top: 60px;
+  h4 {
+    font-size: variable.$font-size-large;
+    font-weight: 700;
+    width: 80%;
+    display: inline;
+  }
+}
+
+.plusSquare {
+  width: 80%;
+  height: 1px;
+  background-color: rgb(233, 233, 233);
+  margin: 0px 10px;
+}
+
+.Passenger-name {
+  margin-top: 20px;
+  img {
+    margin-right: 20px;
+  }
+}
+
+.first-Passenger-info {
+  border-right: 1px solid variable.$color-body;
+}

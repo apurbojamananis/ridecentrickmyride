@@ -1,0 +1,96 @@
+
+@use "../utils/index" as variable;
+
+.main-content-bottom-left {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  background-color: white;
+}
+
+.main-content-instruction {
+  padding: 31px 14px 23px 17px;
+}
+
+.main-content-instruction-note {
+  font-size: variable.$font-size-medium;
+  color: variable.$color-blue;
+  margin-top: 25px;
+}
+
+.note-route {
+  position: relative;
+}
+
+.note-route::after {
+  content: "";
+  display: inline-block;
+  width: 70%;
+  height: 1px;
+  position: absolute;
+  background-color: rgb(233, 233, 233);
+  opacity: 0.5;
+  top: 10px;
+  margin-left: 10px;
+}
+
+.main-content-instruction-box {
+  margin-top: 5px;
+  background-color: #c6dafc;
+  padding: 22px 33px 22px 18px;
+  border-radius: 5px;
+  min-height: 304px;
+  p {
+    font-size: variable.$font-size-medium;
+    font-weight: 400;
+    &:nth-child(2) {
+      margin-top: 15px;
+    }
+  }
+}
+.main-content-service-section {
+  padding-right: 0px;
+}
+.main-content-service {
+  padding: 33px 20px 33px 33px;
+}
+
+.InputBox {
+  margin-top: 27px;
+  max-width: 100%;
+  label {
+    font-size: variable.$font-size-medium;
+    padding-bottom: 10px;
+    font-weight: 400;
+  }
+
+  input {
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    padding: 8px;
+    width: 95%;
+  }
+  input:focus {
+    outline: 2px solid variable.$color-blue;
+  }
+  input::placeholder {
+    font-size: 12px;
+    color: #c2c2c2;
+  }
+}
+
+.main-content-service-fair {
+  margin-top: 35px;
+  overflow: auto;
+  padding-right: 20px;
+  min-width: 150px;
+}
+
+.fair-footer {
+  margin-top: 30px;
+  a {
+    color: variable.$color-blue;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+}

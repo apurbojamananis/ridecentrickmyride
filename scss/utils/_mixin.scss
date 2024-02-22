@@ -1,0 +1,22 @@
+@use "variables" as variable;
+
+@mixin Btn {
+  padding: 8px 21px;
+  background-color: variable.$color-green;
+  border-radius: 16px;
+  border: 1px solid variable.$color-green;
+  color: white;
+  font-size: variable.$font-size-small;
+  cursor: pointer;
+  transition: all;
+}
+
+.custom-btn {
+  @include Btn;
+}
+
+.custom-btn:hover {
+  background-color: transparent;
+  outline: 1px solid variable.$color-green;
+  color: variable.$color-green;
+}
