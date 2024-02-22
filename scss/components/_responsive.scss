@@ -33,7 +33,7 @@
 
 // Usage example
 .main-content-header {
-  @include responsive(width, 100%, 100%, 100%, 80%, 60%, 40%);
+  @include responsive(width, 90%, 900%, 900%, 80%, 60%, 40%);
 }
 
 .main-content-header h1 {
